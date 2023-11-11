@@ -16,6 +16,7 @@ const Home = () => {
 
   return (
     <div className="home">
+      hello
       {blogs && <BlogList blogs={blogs} />}
     </div>
   );
