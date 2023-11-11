@@ -16,7 +16,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      hello
+      <p>c'est pas possible !</p>
       {blogs && <BlogList blogs={blogs} />}
     </div>
   );
