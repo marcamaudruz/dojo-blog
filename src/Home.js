@@ -1,23 +1,14 @@
 import { useEffect, useState } from "react";
 import BlogList from "./BlogList";
+import useFetch from "./useFetch";
 
 const Home = () => {
-  const [blogs, setBlogs] = useState(null)
-
-  useEffect(() => {
-    fetch('http://localhost:8000/blogs')
-      .then(res => {
-        return res.json();
-      })
-      .then(data => {
-        setBlogs(data);
-      })
-  }, [])
-
-  return (
+    const { data: blogs, isPending, error } = useFetch('https://my-json-server.typicode.com/marcamaudruz/dojo-blog/blogs');
+    return (
     <div className="home">
-      <p>c'est pas possible !</p>
-      {blogs && <BlogList blogs={blogs} />}
+      { error && <div>{ error }</div> }
+      { isPending && <div>Loading...</div> }
+      { blogs && <BlogList blogs={blogs} /> }
     </div>
   );
 }

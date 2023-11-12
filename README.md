@@ -1,5 +1,5 @@
-# Getting Started with Create React App
-
+Pour json server sur Github :
+https://my-json-server.typicode.com/marcamaudruz/dojo-blog/blogs
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
